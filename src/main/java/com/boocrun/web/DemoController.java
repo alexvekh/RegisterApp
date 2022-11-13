@@ -1,6 +1,6 @@
 package com.boocrun.web;
 
-import java.util.List;
+//import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,9 +19,9 @@ public class DemoController {
 	@Autowired
 	private UserRepository userRepo;
 	
-	@GetMapping("")
+	@GetMapping("/")
 	public String root (ModelMap model) {
-		List<User> allUsers = userRepo.findAll();
+		Iterable<User> allUsers = userRepo.findAll();
 		
 		User user = new User();
 		

@@ -1,4 +1,4 @@
-<form!DOCYTYPE html>
+<!DOCYTYPE html>
 <html xmlns:th="http://thymeleaf.org">
   <head>
     <title>Registration App</title>
@@ -10,7 +10,7 @@
       <input type="submit" value="Create User" />
     </form>
     
-    <div th:each="user : ${allUsers}" th:text="/${user.email} -> ${user.password}/">
+    <div th:each="user:${allUsers}" th:text="${user.email + ' -> ' + user.password}">
     </div>
     
   </body> 
