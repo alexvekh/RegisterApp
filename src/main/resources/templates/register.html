@@ -11,6 +11,16 @@
     </form>
     
     <div th:each="user:${allUsers}" th:text="${user.email + ' -> ' + user.password}">
+<!--        <div th:each="user:${allUsers}" th:inline="text">[[${user.email + ' -> ' + user.password}]]> <a th:href="@{del/{user}(user=${luser})}">delete</a>-->
+
+<!-- Tryed to make delete button for each user record
+
+        <form th:action="@{/deleteUser/${user.id}}" th:object="${user}" method="post">
+                        <input type="hidden" th:field="${user}">Delete</input>
+                        <button type="delete" />
+    
+    <button type="delete" value="Delete User">Delete</button>
+-->
     </div>
     
   </body> 
